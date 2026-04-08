@@ -1,0 +1,48 @@
+# Virtual environments
+.venv/
+.venv-1/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Word temp files
+~$*.docx
+
+# IDE
+.vscode/
+*.code-workspace
+
+# Large data files
+*.xls
+*.xlsx
+*.db
+*.zip
+
+# Model artifacts
+*.joblib
+*.h5
+*.pkl
+*.pt
+*.pth
+
+# Node (if any React projects)
+node_modules/
+package-lock.json
+
+# Misc
+*.mp4
+*.mp3
+*.epub
+*.log
