@@ -2,7 +2,7 @@
 
 Graduate coursework from the **Master of Professional Studies in Applied AI** program at **Northeastern University** (Charlotte Campus). This repository contains selected notebooks and projects spanning artificial intelligence fundamentals, machine learning, and deep learning — demonstrating end-to-end ML pipelines, search algorithms, reinforcement learning, and neural network architectures.
 
-> **Note:** This repo focuses on coursework. For my flagship applied AI project, see [Harbor](https://github.com/MichaelZimm20/AAI6600-Mental-Health-Chatbot-XL) — an AI-powered mental health chatbot for college students, built as the AAI6600 group capstone.
+> **Flagship projects:** [Harbor](https://github.com/MichaelZimm20/AAI6600-Mental-Health-Chatbot-XL) — AI-powered mental health chatbot for college students | [Credit Risk Deployment](https://github.com/MichaelZimm20/credit-risk-deployment) — CI/CD pipeline serving a trained ML model via Gradio
 
 ---
 
@@ -10,6 +10,9 @@ Graduate coursework from the **Master of Professional Studies in Applied AI** pr
 
 ```
 .
+├── data/
+│   └── default_of_credit_card_clients.csv
+│
 ├── AAI6600-Applied-AI/
 │   └── maze_solver_development.ipynb
 │
