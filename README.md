@@ -2,7 +2,7 @@
 
 Graduate coursework from the **Master of Professional Studies in Applied AI** program at **Northeastern University** (Charlotte Campus). This repository contains selected notebooks and projects spanning artificial intelligence fundamentals, machine learning, and deep learning — demonstrating end-to-end ML pipelines, search algorithms, reinforcement learning, and neural network architectures.
 
-> **Flagship projects:** [Harbor](https://github.com/MichaelZimm20/AAI6600-Mental-Health-Chatbot-XL) — AI-powered mental health chatbot for college students | [Credit Risk Deployment](https://github.com/MichaelZimm20/credit-risk-deployment) — CI/CD pipeline serving a trained ML model via Gradio
+> **Flagship projects:** [Harbor](https://github.com/MichaelZimm20/AAI6600-Mental-Health-Chatbot-XL) — AI-powered mental health chatbot for college students | [FinSight](https://github.com/MichaelZimm20/finsight-ai-acquisition-pipeline) — AI-powered fintech acquisition pipeline (LightGBM + LSTM) | [Brain MRI Tumor Classification](https://github.com/MichaelZimm20/brain-mri-tumor-classification) — CNN, ResNet50, and ViT with GradCAM | [Credit Risk Deployment](https://github.com/MichaelZimm20/credit-risk-deployment) — CI/CD pipeline serving a trained ML model via Gradio
 
 ---
 
@@ -26,7 +26,9 @@ Graduate coursework from the **Master of Professional Studies in Applied AI** pr
 ├── AAI6640-Applied-Deep-Learning/
 │   ├── AAI6640_A1_DL_Fundamentals.ipynb
 │   ├── AAI6640_A2_MNIST_Weight_Initialization.ipynb
-│   └── AAI6640_A3_Advanced_CNNs.ipynb
+│   ├── AAI6640_A3_Advanced_CNNs.ipynb
+│   ├── AAI6640_A4_RNN_BPTT.ipynb
+│   └── AAI6640_A5_Transformers_Attention.ipynb
 │
 └── README.md
 ```
@@ -38,7 +40,7 @@ Graduate coursework from the **Master of Professional Studies in Applied AI** pr
 Foundations of AI: search algorithms, knowledge representation, reasoning, planning, and decision-making.
 
 | Notebook | Description |
-|----------|-------------|
+| --- | --- |
 | **Maze Solver** | Implementation of BFS, DFS, and Greedy Best-First Search algorithms for maze solving. Includes maze parsing, path visualization, and performance comparison across all three strategies. |
 
 ---
@@ -48,7 +50,7 @@ Foundations of AI: search algorithms, knowledge representation, reasoning, plann
 End-to-end machine learning pipeline development, from supervised and unsupervised learning through reinforcement learning and model deployment.
 
 | Notebook | Description |
-|----------|-------------|
+| --- | --- |
 | **Credit Risk Pipeline** | Custom `CreditRiskPipeline` class training Logistic Regression, Random Forest, and LightGBM on the UCI Credit Card Default dataset (30K records). Includes preprocessing, evaluation (accuracy, ROC AUC, confusion matrix), qualitative error analysis, and model serialization via joblib. |
 | **Credit Risk — Deep Learning** | Extends the Module 3 pipeline with a TensorFlow/Keras neural network. Compares deep learning performance against the three statistical models on the same credit risk dataset. |
 | **Wine Clustering** | K-Means vs. Agglomerative Clustering on the UCI Wine dataset. Includes PCA-based visualization, dendrogram analysis, and evaluation with silhouette score, adjusted Rand index, and normalized mutual information. |
@@ -63,17 +65,33 @@ The credit risk project evolves across three modules, demonstrating iterative mo
 2. **Module 5** — Deep learning extension (neural network added)
 3. **Module 8** — Full re-evaluation with class balancing, expanded metrics, and hyperparameter tuning
 
+> **AAI6610 Capstone (separate repo):** [FinSight — AI-Powered Financial Acquisition Pipeline](https://github.com/MichaelZimm20/finsight-ai-acquisition-pipeline) — LightGBM + LSTM pipeline for prospect scoring, routing, and compliance.
+
 ---
 
 ## AAI6640 — Applied Deep Learning
 
-Neural network fundamentals, optimization, weight initialization, hyperparameter tuning, and convolutional architectures.
+Neural network fundamentals, optimization, weight initialization, CNN architectures, RNNs, Transformers, and GANs.
 
 | Notebook | Description |
-|----------|-------------|
+| --- | --- |
 | **A1 — Deep Learning Fundamentals** | Gradient descent theory, backpropagation derivation for a fully connected network (sigmoid activation, cross-entropy loss), and forward/backward pass implementation. |
 | **A2 — MNIST Weight Initialization** | Comparison of Xavier vs. Kaiming initialization on MNIST using PyTorch. Analyzes the impact of initialization strategy on training convergence and classification accuracy. |
 | **A3 — Advanced CNNs** | MLP and CNN hyperparameter tuning on MNIST via grid search. Explores hidden layer configurations, dropout rates, and optimizer selection. Evaluates model performance across tuning combinations. |
+| **A4 — Recurrent Neural Networks & BPTT** | Implementation and conceptual breakdown of Backpropagation Through Time (BPTT) for RNNs. Includes LSTM-based time series forecasting on the Air Passengers dataset, with vanishing gradient analysis and comparison of vanilla RNN vs. LSTM. |
+| **A5 — Transformers & Attention Mechanisms** | Deep dive into the Transformer architecture from the original "Attention Is All You Need" paper. Covers scaled dot-product attention, multi-head attention (Q/K/V mechanics), positional encoding, and encoder-decoder structure. Includes implementation exercises. |
+
+### AAI6640 Progression
+
+| Assignment | Architecture | Key Concepts |
+|---|---|---|
+| A1 | Fully Connected NN | Gradient descent, backpropagation, cross-entropy |
+| A2 | MNIST Classifier | Xavier vs Kaiming initialization, convergence analysis |
+| A3 | CNN | Hyperparameter grid search, dropout, optimizer comparison |
+| A4 | RNN / LSTM | BPTT, vanishing gradients, time series forecasting |
+| A5 | Transformer | Self-attention, multi-head attention, positional encoding |
+
+> **AAI6640 Final Project (separate repo):** [Brain MRI Tumor Classification](https://github.com/MichaelZimm20/brain-mri-tumor-classification) — CNN, ResNet50 transfer learning, and Vision Transformer with GradCAM saliency maps on 7,000+ MRI scans.
 
 ---
 
@@ -91,16 +109,18 @@ Neural network fundamentals, optimization, weight initialization, hyperparameter
 ## Related Repositories
 
 | Project | Description |
-|---------|-------------|
+| --- | --- |
 | [Harbor (AAI6600 Capstone)](https://github.com/MichaelZimm20/AAI6600-Mental-Health-Chatbot-XL) | AI-powered mental health chatbot for college students — contributed to Pipeline 1 (data processing, clustering, ML classification) |
+| [FinSight (AAI6610 Capstone)](https://github.com/MichaelZimm20/finsight-ai-acquisition-pipeline) | AI-powered financial prospect acquisition pipeline — LightGBM + LSTM scoring, routing, and compliance |
+| [Brain MRI Tumor Classification (AAI6640 Final)](https://github.com/MichaelZimm20/brain-mri-tumor-classification) | CNN, ResNet50, and ViT pipeline for brain tumor classification with GradCAM interpretability |
 | [Credit Risk Deployment](https://github.com/MichaelZimm20/credit-risk-deployment) | CI/CD pipeline serving the trained credit risk model via Gradio |
 
 ---
 
 ## About
 
-**Michael Zimmerman**  
-MPS Applied AI Candidate — Northeastern University (Charlotte Campus)  
+**Michael Zimmerman**
+MPS Applied AI Candidate — Northeastern University (Charlotte Campus)
 BS Computer Science | IT Specialist | Full-Stack Developer
 
 - [LinkedIn](https://linkedin.com/in/michael-zimmerman-jr-8b859169/)
